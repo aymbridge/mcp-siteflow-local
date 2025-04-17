@@ -6,6 +6,7 @@ A Python-based MCP server that integrates with the Siteflow API, providing an ea
 
 - Python 3.8 or higher
 - pip (Python package installer)
+- uv (Python package installer)
 - A Siteflow account with API access (client ID and secret)
 - Project ID from your Siteflow account
 
@@ -14,15 +15,23 @@ A Python-based MCP server that integrates with the Siteflow API, providing an ea
 1. Clone this repository or download the source code:
 
 ```bash
-git clone <repository-url>
-cd mcp_siteflow
+git clone https://github.com/aymbridge/mcp-siteflow-local
+cd mcp-siteflow-local
 ```
 
-2. Install the required dependencies:
+2. Install FastMCP using uv:
+
+```bash
+uv pip install fastmcp
+```
+
+3. Install the other required dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
+
+Note: The `mcp` module is part of the `fastmcp` package, so only installing fastmcp is needed for MCP functionality.
 
 ## Environment Setup
 
