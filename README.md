@@ -55,6 +55,34 @@ python mcp_siteflow.py
 
 This will start the MCP server in the terminal, waiting for commands.
 
+## Configuring with Claude Desktop
+
+To use this MCP server with Claude Desktop, you need to add configuration details to Claude's MCP configuration file.
+
+1. In Claude Desktop, navigate to Settings > Advanced Settings
+2. Locate the MCP configuration section or file
+3. Add the following configuration (adjust paths as needed):
+
+```json
+{
+  "mcpServers": {
+    "siteflow": {
+      "command": "path/to/python3",
+      "args": [
+        "path/to/mcp_siteflow.py"
+      ]
+    }
+  }
+}
+```
+
+Replace `path/to/python3` with the actual path to your Python executable (e.g., `/usr/bin/python3` on Linux/macOS or `C:\\Python38\\python.exe` on Windows).
+
+Replace `path/to/mcp_siteflow.py` with the absolute path to the `mcp_siteflow.py` file in your installation directory.
+
+4. Restart Claude Desktop to apply the changes
+5. You should now be able to access the Siteflow MCP commands directly from Claude Desktop
+
 ## Available Commands
 
 The MCP server provides several commands for interacting with the Siteflow API:
