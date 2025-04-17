@@ -1,0 +1,41 @@
+{
+    "name": "Siteflow MCP",
+    "description": "Access and manage Siteflow flows and phases",
+    "version": "1.0.0",
+    "endpoints": [
+      {
+        "name": "authenticate",
+        "description": "Authenticate with the Siteflow API",
+        "url": "http://localhost:5000/mcp/authenticate",
+        "method": "POST"
+      },
+      {
+        "name": "getFlows",
+        "description": "Get all available flows, optionally filtered by project",
+        "url": "http://localhost:5000/mcp/flows",
+        "method": "GET",
+        "parameters": [
+          {
+            "name": "projectId",
+            "description": "Optional project ID to filter flows",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "getFlowPhases",
+        "description": "Get phases for a specific flow",
+        "url": "http://localhost:5000/mcp/flows/{flowId}/phases",
+        "method": "GET",
+        "parameters": [
+          {
+            "name": "flowId",
+            "description": "ID of the flow to get phases for",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  }
