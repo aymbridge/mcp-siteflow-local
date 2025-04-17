@@ -16,7 +16,7 @@ mcp = FastMCP("siteflow")
 class SiteflowAPI:
     def __init__(self):
         """Initialize the API client with credentials and base URL."""
-        self.server_url = "https://poc-ai.siteflow.co"
+        self.server_url = os.getenv("SITEFLOW_SERVER_URL", "https://poc-ai.siteflow.co")
         
         # Get API credentials from environment variables
         self.client_id = os.getenv("SITEFLOW_CLIENT_ID")
