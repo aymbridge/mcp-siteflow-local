@@ -46,13 +46,14 @@ touch .env
 2. Open the `.env` file in your preferred text editor and add the following variables:
 
 ```
+SITEFLOW_SERVER_URL=https://poc-ai.siteflow.co
 SITEFLOW_CLIENT_ID=your_client_id_here
 SITEFLOW_CLIENT_SECRET=your_client_secret_here
 SITEFLOW_PROJECT_ID=your_project_id_here
 SITEFLOW_FAMILY_ID=your_family_id_here  # Optional
 ```
 
-Replace the placeholder values with your actual Siteflow API credentials.
+Replace the placeholder values with your actual Siteflow API credentials. The `SITEFLOW_SERVER_URL` can be modified if you need to connect to a different Siteflow environment.
 
 ## Running the MCP Server
 
